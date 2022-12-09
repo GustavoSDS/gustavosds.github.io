@@ -216,8 +216,9 @@ body {
 
 @media (min-width: 1440px) {
   .container {
-    width: 1110px;
+    width: 1440px;
     margin: 100px auto 0;
+    border: 1px solid red;
   }
   .header {
     width: 100%;
@@ -248,10 +249,10 @@ body {
   }
   .main-container {
     width: 100%;
+    height: auto;
     display: flex;
     flex-direction: row;
     margin-top: 54px;
-    border: 1px solid red;
   }
   .main-container__principal {
     width: 730px;
