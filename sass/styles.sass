@@ -1,0 +1,232 @@
+@use 'initial'
+@use 'variables' as var
+// @use 'medias'
+
+.header
+    width: 345px
+    height: 88px
+    margin: auto
+    padding-top: 25px
+    position: relative
+    &__icons
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &__logo:hover, &__menu:hover
+        cursor: pointer
+.nav-bar
+    display: none
+.nav-mobile
+    display: none
+    background-color: var.$Off-white
+    position: absolute
+    top: 0
+    right: 0
+    width: 256px
+    height: 100vh
+    z-index: 1
+    &__icon-close
+        position: relative
+        left: 200px
+        top: 26px
+    &__background
+        display: none
+        position: absolute
+        top: 0
+        left: -15px
+        width: 375px
+        height: 100vmax * 2.5
+        background-color: var.$Dark-grayish-blue-opacity
+    &__nav-bar
+        margin-top: 96px
+        padding-left: 20px
+        height: 217px
+    &__items
+        list-style: none
+    &__item
+        font-size: 18px
+        color: var.$Very-dark-blue
+        text-decoration: none
+        font-weight: 400
+        line-height: 45px
+        &:hover
+            color: var.$Soft-orange
+
+.main-container
+    width: 345px
+    margin: auto
+    &__principal
+        height: 700px
+        display: flex
+        flex-direction: column
+    &__image
+        height: 300px
+        background:
+            image: url(../assets/images/image-web-3-mobile.jpg)
+            size: cover
+            repeat: no-repeat
+    &__secondary
+        width: 343px
+        height: 489px
+        margin: auto
+        padding: 30px 20px
+        background-color: var.$Very-dark-blue
+    &__title
+        line-height: .8
+        font-size: 32px
+        color: var.$Soft-orange
+        margin-bottom: 40px
+    &__subtitle
+        margin-bottom: 15px
+        font-size: 20.8px
+        font-weight: 700
+        line-height: 1
+        letter-spacing: 0%
+        color: var.$Off-white
+        &:hover
+            cursor: pointer
+            color: var.$Soft-orange
+    &__description
+        width: 292px
+        height: auto
+        line-height: 24px
+        color: var.$Grayish-blue
+        padding-bottom: 25px
+
+.border-bottom
+    border-bottom: 1px solid var.$Dark-grayish-blue
+    margin-bottom: 30px
+
+.details
+    height: 335px
+    &__title
+        width: 286px
+        height: 126px
+        margin-top: 22px
+        font-size: 40px
+        font-weight: 800
+        line-height: 41px
+        letter-spacing: 0.01em
+    &__description
+        width: 334px
+        height: 104px
+        margin-top: 12px
+        line-height: 26px
+    &__button
+        width: 185px
+        height: 48px
+        margin-top: 24px
+        background-color: var.$Soft-red
+        border: none
+        text-transform: uppercase
+        color: var.$Off-white
+        font-weight: 700
+        letter-spacing: 3px
+        &:hover
+            cursor: pointer
+            background-color: var.$Very-dark-blue
+
+.aside
+    width: 343px
+    margin: 64px auto 81px
+.card
+    display: flex
+    margin-bottom: 34px
+    &__image
+        width: 100px
+        height: 129px
+    &__details
+        width: 243px
+        padding-left: 24px
+    &__number
+        margin-top: 4px
+        color: var.$Grayish-blue
+        font-size: 32px
+        line-height: .8
+        font-weight: 700
+    &__title
+        margin-top: 15px
+        font-size: 18px
+        font-weight: 800
+        &:hover
+            cursor: pointer
+            color: var.$Soft-red
+    &__description
+        height: 52px
+        line-height: 25.5px
+        margin-top: 8px
+
+@media ( min-width: 1440px )
+    .container
+        width: 1110px
+        height: 1024px
+        margin: 90px auto 0
+    .header
+        width: 100%
+        height: 40px
+        padding-top: 0
+        &__menu
+            display: none
+    .nav-bar
+        display: block
+        position: relative
+        top: -30px
+        &__items
+            display: flex
+            justify-content: flex-end
+            list-style: none
+        &__item
+            font-size: 16px
+            text-decoration: none
+            padding-left: 40px
+            color: var.$Dark-grayish-blue
+            &:hover
+                color: var.$Soft-orange
+
+    .main-container
+        width: 100%
+        display: flex
+        flex-direction: row
+        margin-top: 54px
+        &__principal
+            width: 730px
+            height: 511px
+            flex-direction: column
+            margin-right: 30px
+        &__image
+            background:
+                image: url('../assets/images/image-web-3-desktop.jpg')
+            width: 100%
+            height: 300px
+        &__secondary
+            width: 350px
+            height: 515px
+
+    .details
+        display: flex
+        flex-direction: row
+        &__title
+            width: 400px
+            height: 210px
+            padding-right: 85px
+            padding-top: 10px
+            font-size: 55px
+            line-height: 58.86px
+        &__more-details
+            width: 350px
+        &__description
+            padding-top: 20px
+            height: 95px
+            margin-bottom: 37px
+
+    .aside
+        width: 100%
+        height: 130px
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+    .card
+        height: 130px
+        &__image
+            width: 100px
+            height: 127px
