@@ -219,6 +219,7 @@ body {
     width: 1440px;
     margin: 100px auto 0;
     border: 1px solid red;
+    padding: 88px 90px 105px 90px;
   }
   .header {
     width: 100%;
