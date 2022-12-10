@@ -162,12 +162,16 @@ body {
   line-height: 26px;
 }
 .details__button {
+  display: grid;
+  align-content: center;
+  text-align: center;
   width: 185px;
   height: 48px;
   margin-top: 24px;
   background-color: hsl(5deg, 85%, 63%);
   border: none;
   text-transform: uppercase;
+  text-decoration: none;
   color: hsl(36deg, 100%, 99%);
   font-weight: 700;
   letter-spacing: 3px;
