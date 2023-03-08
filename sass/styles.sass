@@ -6,7 +6,7 @@
     width: 345px
     height: 88px
     margin: auto
-    padding-top: 25px
+    // padding-top: 25px
     position: relative
     &__icons
         display: flex
@@ -64,12 +64,12 @@
     &__image
         height: 300px
         background:
-            image: url(../assets/images/image-web-3-mobile.jpg)
+            image: url(../assets/images/programmer-mobile.jpg)
             size: cover
             repeat: no-repeat
     &__secondary
         width: 343px
-        height: 489px
+        // height: 489px
         margin: auto
         padding: 30px 20px
         background-color: var.$Very-dark-blue
@@ -80,7 +80,7 @@
         margin-bottom: 40px
     &__subtitle
         margin-bottom: 15px
-        font-size: 20.8px
+        font-size: 20px
         font-weight: 700
         line-height: 1
         letter-spacing: 0%
@@ -100,20 +100,25 @@
     margin-bottom: 30px
 
 .details
-    height: 335px
+
     &__title
         width: 286px
-        height: 126px
         margin-top: 22px
-        font-size: 40px
-        font-weight: 800
+        color: var.$Dark-grayish-blue-opacity
+        font-size: .9375rem
+        font-weight: 600
         line-height: 41px
         letter-spacing: 0.01em
     &__description
+        font-size: 1.1rem
+        text-align: justify
+        letter-spacing: 1px
         width: 334px
-        height: 104px
-        margin-top: 12px
         line-height: 26px
+        span
+            color: var.$Dark-grayish-blue
+            font-weight: 800
+
     &__button
         display: grid
         align-content: center
@@ -135,14 +140,20 @@
 .aside
     width: 343px
     margin: 64px auto 80px
+    &__title
+        margin-bottom: 30px
+        color: var.$Off-white
+        background: linear-gradient(to right, var.$Very-dark-blue, var.$Off-white)
+        font-size: 32px
+        text-align: center
 .card
     display: flex
     margin-bottom: 34px
+    height: auto
     &__image
-        width: 100px
-        height: 129px
+        height: 180px
     &__details
-        width: 243px
+        width: auto
         padding-left: 24px
     &__number
         margin-top: 4px
@@ -154,19 +165,62 @@
         margin-top: 15px
         font-size: 18px
         font-weight: 800
+        text-decoration: none
+        color: var.$Dark-grayish-blue
         &:hover
             cursor: pointer
             color: var.$Soft-red
     &__description
-        height: 52px
         line-height: 25.5px
         margin-top: 8px
+        text-align: justify
+        font-size: 13px
+
+.contact
+
+    &__title
+        @extend .aside__title
+
+    .form
+        display: flex
+        flex-direction: column
+        gap: 10px
+
+        &__label-name
+            font-weight: 700
+            color: var.$Dark-grayish-blue
+        &__input-name
+            background-color: var.$Light-gray
+            padding-left: 10px
+            height: 44px
+            border-radius: 8px
+            border: 1px solid var.$Grayish-blue
+            outline: none
+            &:hover
+                border: 1px solid var.$Dark-grayish-blue
+            &::placeholder
+                color: var.$Grayish-blue
+        &__label-email
+            @extend .form__label-name
+        &__input-email
+            @extend .form__input-name
+        &__label-menssage
+            @extend .form__label-name
+        &__menssage
+            @extend .form__input-name
+            min-height: 90px
+            padding: 10px
+            resize: none
+        &__btn-submit
+            @extend .details__button
+            background-color: var.$Soft-orange
+            margin: 15px auto
 
 @media ( min-width: 1440px )
     .container
         width: 1110px
         height: 1024px
-        margin: 90px auto 0
+        margin: 10px auto 0
     .header
         width: 100%
         height: 40px
@@ -201,12 +255,13 @@
             margin-right: 30px
         &__image
             background:
-                image: url('../assets/images/image-web-3-desktop.jpg')
+                image: url('../assets/images/programmer.jpg')
+                position: center
             width: 100%
             height: 300px
         &__secondary
             width: 350px
-            height: 515px
+            min-height: 512px
 
     .details
         display: flex
@@ -218,21 +273,33 @@
             padding-top: 10px
             font-size: 55px
             line-height: 58.86px
+
         &__more-details
             width: 350px
+            display: flex
+            flex-direction: column
         &__description
-            padding-top: 20px
-            height: 95px
-            margin-bottom: 37px
+            padding-top: 10px
+            height: auto
 
     .aside
         width: 100%
-        height: 130px
-        display: flex
-        flex-direction: row
-        justify-content: space-between
+
+    .cards
+        display: grid
+        grid-template-columns: 2fr 2fr
+        gap: 50px
+
     .card
         height: 130px
         &__image
-            width: 100px
-            height: 127px
+            height: 200px
+
+    .contact
+        &__title
+            width: 50%
+            margin: auto
+
+        .form
+            margin: 40px auto
+            width: 50%

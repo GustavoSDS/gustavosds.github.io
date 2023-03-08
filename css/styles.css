@@ -28,7 +28,6 @@ body {
   width: 345px;
   height: 88px;
   margin: auto;
-  padding-top: 25px;
   position: relative;
 }
 .header__icons {
@@ -101,13 +100,12 @@ body {
 }
 .main-container__image {
   height: 300px;
-  background-image: url(../assets/images/image-web-3-mobile.jpg);
+  background-image: url(../assets/images/programmer-mobile.jpg);
   background-size: cover;
   background-repeat: no-repeat;
 }
 .main-container__secondary {
   width: 343px;
-  height: 489px;
   margin: auto;
   padding: 30px 20px;
   background-color: hsl(240deg, 100%, 5%);
@@ -120,7 +118,7 @@ body {
 }
 .main-container__subtitle {
   margin-bottom: 15px;
-  font-size: 20.8px;
+  font-size: 20px;
   font-weight: 700;
   line-height: 1;
   letter-spacing: 0%;
@@ -143,25 +141,27 @@ body {
   margin-bottom: 30px;
 }
 
-.details {
-  height: 335px;
-}
 .details__title {
   width: 286px;
-  height: 126px;
   margin-top: 22px;
-  font-size: 40px;
-  font-weight: 800;
+  color: hsla(236deg, 13%, 42%, 0.508);
+  font-size: 0.9375rem;
+  font-weight: 600;
   line-height: 41px;
   letter-spacing: 0.01em;
 }
 .details__description {
+  font-size: 1.1rem;
+  text-align: justify;
+  letter-spacing: 1px;
   width: 334px;
-  height: 104px;
-  margin-top: 12px;
   line-height: 26px;
 }
-.details__button {
+.details__description span {
+  color: hsl(236deg, 13%, 42%);
+  font-weight: 800;
+}
+.details__button, .contact .form__btn-submit {
   display: grid;
   align-content: center;
   text-align: center;
@@ -176,7 +176,7 @@ body {
   font-weight: 700;
   letter-spacing: 3px;
 }
-.details__button:hover {
+.details__button:hover, .contact .form__btn-submit:hover {
   cursor: pointer;
   background-color: hsl(240deg, 100%, 5%);
 }
@@ -185,17 +185,24 @@ body {
   width: 343px;
   margin: 64px auto 80px;
 }
+.aside__title, .contact__title {
+  margin-bottom: 30px;
+  color: hsl(36deg, 100%, 99%);
+  background: linear-gradient(to right, hsl(240deg, 100%, 5%), hsl(36deg, 100%, 99%));
+  font-size: 32px;
+  text-align: center;
+}
 
 .card {
   display: flex;
   margin-bottom: 34px;
+  height: auto;
 }
 .card__image {
-  width: 100px;
-  height: 129px;
+  height: 180px;
 }
 .card__details {
-  width: 243px;
+  width: auto;
   padding-left: 24px;
 }
 .card__number {
@@ -209,22 +216,58 @@ body {
   margin-top: 15px;
   font-size: 18px;
   font-weight: 800;
+  text-decoration: none;
+  color: hsl(236deg, 13%, 42%);
 }
 .card__title:hover {
   cursor: pointer;
   color: hsl(5deg, 85%, 63%);
 }
 .card__description {
-  height: 52px;
   line-height: 25.5px;
   margin-top: 8px;
+  text-align: justify;
+  font-size: 13px;
+}
+
+.contact .form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact .form__label-name, .contact .form__label-menssage, .contact .form__label-email {
+  font-weight: 700;
+  color: hsl(236deg, 13%, 42%);
+}
+.contact .form__input-name, .contact .form__menssage, .contact .form__input-email {
+  background-color: hsla(255deg, 8%, 79%, 0.15);
+  padding-left: 10px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid hsl(233deg, 8%, 79%);
+  outline: none;
+}
+.contact .form__input-name:hover, .contact .form__menssage:hover, .contact .form__input-email:hover {
+  border: 1px solid hsl(236deg, 13%, 42%);
+}
+.contact .form__input-name::placeholder, .contact .form__menssage::placeholder, .contact .form__input-email::placeholder {
+  color: hsl(233deg, 8%, 79%);
+}
+.contact .form__menssage {
+  min-height: 90px;
+  padding: 10px;
+  resize: none;
+}
+.contact .form__btn-submit {
+  background-color: hsl(35deg, 77%, 62%);
+  margin: 15px auto;
 }
 
 @media (min-width: 1440px) {
   .container {
     width: 1110px;
     height: 1024px;
-    margin: 90px auto 0;
+    margin: 10px auto 0;
   }
   .header {
     width: 100%;
@@ -266,13 +309,14 @@ body {
     margin-right: 30px;
   }
   .main-container__image {
-    background-image: url("../assets/images/image-web-3-desktop.jpg");
+    background-image: url("../assets/images/programmer.jpg");
+    background-position: center;
     width: 100%;
     height: 300px;
   }
   .main-container__secondary {
     width: 350px;
-    height: 515px;
+    min-height: 512px;
   }
   .details {
     display: flex;
@@ -288,25 +332,34 @@ body {
   }
   .details__more-details {
     width: 350px;
+    display: flex;
+    flex-direction: column;
   }
   .details__description {
-    padding-top: 20px;
-    height: 95px;
-    margin-bottom: 37px;
+    padding-top: 10px;
+    height: auto;
   }
   .aside {
     width: 100%;
-    height: 130px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 50px;
   }
   .card {
     height: 130px;
   }
   .card__image {
-    width: 100px;
-    height: 127px;
+    height: 200px;
+  }
+  .contact__title {
+    width: 50%;
+    margin: auto;
+  }
+  .contact .form {
+    margin: 40px auto;
+    width: 50%;
   }
 }
 

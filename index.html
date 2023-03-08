@@ -6,9 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- displays site properly based on user's device -->
 
+  <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+  <link rel="manifest" href="./assets/images/site.webmanifest">
+  <title>Gustavo S. Dos Santos</title>
+  <!-- Open Graph data -->
+  <meta property="og:title" content="My CV" />
+  <meta property="og:type" content="CV - Programer - HTML - CSS - JS" />
+  <meta property="og:url" content=" http://www.example.com" />
+  <meta property="og:image" content=" http://example.com/image.jpg" />
+  <meta property="og:description" content="Proyecto Final de Front end Academy - 2023" />
 
-  <title>Frontend Mentor | News homepage</title>
+  <!-- Styles -->
   <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -16,20 +27,20 @@
   <div class="container">
     <header class="header">
       <div class="header__icons">
-        <img src="./assets/images/logo.svg" alt="logo" class="header__logo">
+        <a href="index.html"><img src="./assets/images/logo.svg" alt="logo" class="header__logo"></a>
         <img src="./assets/images/icon-menu.svg" alt="icon menu" class="header__menu" id="icon-menu">
       </div>
-      
+
       <div class="nav-mobile__background" id="nav-background">
         <div class="nav-mobile" id="nav-menu">
-          <img class="nav-mobile__icon-close" src="./assets/images/icon-menu-close.svg" alt="icon close" id="icon-close">
+          <img class="nav-mobile__icon-close" src="./assets/images/icon-menu-close.svg" alt="icon close"
+            id="icon-close">
           <nav class="nav-mobile__nav-bar">
             <ul class="nav-mobile__items">
-              <li><a href="" class="nav-mobile__item">Home</a></li>
-              <li><a href="" class="nav-mobile__item">New</a></li>
-              <li><a href="" class="nav-mobile__item">Popular</a></li>
-              <li><a href="" class="nav-mobile__item">Trending</a></li>
-              <li><a href="" class="nav-mobile__item">Categories</a></li>
+              <li><a href="index.html" class="nav-mobile__item">Inicio</a></li>
+              <li><a href="#" class="nav-mobile__item">Sobre mi</a></li>
+              <li><a href="#" class="nav-mobile__item">Contacto</a></li>
+              <li><a href="#" class="nav-mobile__item">Proyectos</a></li>
             </ul>
           </nav>
         </div>
@@ -37,11 +48,10 @@
 
       <nav class="nav-bar">
         <ul class="nav-bar__items">
-          <li><a href="" class="nav-bar__item">Home</a></li>
-          <li><a href="" class="nav-bar__item">New</a></li>
-          <li><a href="" class="nav-bar__item">Popular</a></li>
-          <li><a href="" class="nav-bar__item">Trending</a></li>
-          <li><a href="" class="nav-bar__item">Categories</a></li>
+          <li><a href="index.html" class="nav-bar__item">Inicio</a></li>
+          <li><a href="#" class="nav-bar__item">Sobre mi</a></li>
+          <li><a href="" class="nav-bar__item">Contacto</a></li>
+          <li><a href="" class="nav-bar__item">Proyectos</a></li>
         </ul>
       </nav>
     </header>
@@ -50,56 +60,134 @@
       <section class="main-container__principal">
         <div class="main-container__image"></div>
         <div class="details">
-          <h1 class="details__title">The Bright Future of Web 3.0?</h1>
+          <h1 class="details__title">Hola, soy Gustavo S. Dos Santos.</h1>
           <div class="details__more-details">
             <p class="details__description">
-              We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?
+              Soy un Programador y Analista con sede en Posadas, Misiones. Practico Desarrollo web y diseño visual. Amo
+              el proceso tanto como el resultado, adopto un enfoque creativo, colaborativo y estratégico para definir y
+              diseñar soluciones.
             </p>
-            <a class="details__button" href="#">Read more</a>
+            <a class="details__button" href="#">Leer más</a>
           </div>
         </div>
       </section>
       <section class="main-container__secondary">
-        <h2 class="main-container__title">New</h2>
-        <h3 class="main-container__subtitle">Hydrogen VS Electric Cars</h3>
-        <p class="main-container__description border-bottom">Will hydrogen-fueled cars ever catch up to EVs?</p>
-        <h3 class="main-container__subtitle">The Downsides of AI Artistry</h3>
-        <p class="main-container__description border-bottom"> What are the possible adverse effects of on-demand AI image generation?</p>
-        <h3 class="main-container__subtitle">Is VC Funding Drying Up?</h3>
-        <p class="main-container__description">Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        <h2 class="main-container__title">Mis Estudios</h2>
+
+        <details>
+          <summary class="main-container__subtitle">Diseñador web
+            <span>(INCADE)</span>
+          </summary>
+          <p class="main-container__description border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </details>
+
+        <details>
+          <summary class="main-container__subtitle">Desarrollador web
+            <span>(INCADE)<span>
+          </summary>
+          <p class="main-container__description border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </details>
+
+        <details>
+          <summary class="main-container__subtitle">Analista de Sistemas
+            <span>(Universidad Siglo 21)<span>
+          </summary>
+          <p class="main-container__description border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </details>
+
+        <details>
+          <summary class="main-container__subtitle">Consultor de TI
+            <span>(UNAM)<span>
+          </summary>
+          <p class="main-container__description border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </details>
+
+
+        <details>
+          <summary class="main-container__subtitle">Ingeniero informático
+            <span>(UNAM)<span>
+          </summary>
+          <p class="main-container__description border-bottom">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          </p>
+        </details>
       </section>
     </main>
 
     <aside class="aside">
-      <div class="card">
-        <img src="./assets/images/image-retro-pcs.jpg" alt="retro pcs" class="card__image">
-        <div class="card__details">
-          <h2 class="card__number">01</h2>
-          <h3 class="card__title">Reviving Retro PCs</h3>
-          <p class="card__description">What happens when old PCs are given modern upgrades?</p>
+      <h2 class="aside__title">Una pequeña selección de mi trabajo.</h2>
+
+      <div class="cards">
+        <div class="card">
+          <img src="./assets/images/interactive-card-details-form.png" alt="retro pcs" class="card__image">
+          <div class="card__details">
+            <h2 class="card__number">01</h2>
+            <a class="card__title" href="https://gsds-interactive-card-details-form.netlify.app/" target="_blank">
+              <h3 class="card__title">Formulario interactivo de detalles de la tarjeta</h3>
+            </a>
+            <p class="card__description">Complete el formulario y vea la actualización de los detalles de la tarjeta en
+              tiempo real.</p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./assets/images/image-top-laptops.jpg" alt="top laptops" class="card__image">
-        <div class="card__details">
-          <h2 class="card__number">02</h2>
-          <h3 class="card__title">Top 10 Laptops of 2022</h3>
-          <p class="card__description">Our best picks for various needs and budgets.</p>
+
+        <div class="card">
+          <img src="./assets/images/calculator-app.png" alt="top laptops" class="card__image">
+          <div class="card__details">
+            <h2 class="card__number">02</h2>
+            <a class="card__title" href="https://gsds-calculator-app.netlify.app/" target="_blank">
+              <h3 class="card__title">Aplicación Calculadora</h3>
+            </a>
+            <p class="card__description">Realizar operaciones matemáticas como suma, resta, multiplicación y división.
+              Ajuste el tema de color según su preferencia.</p>
+          </div>
         </div>
-      </div>
-      <div class="card">
-        <img src="./assets/images/image-gaming-growth.jpg" alt="retro pcs" class="card__image">
-        <div class="card__details">
-          <h2 class="card__number">01</h2>
-          <h3 class="card__title">The Growth of Gaming</h3>
-          <p class="card__description">How the pandemic has sparked fresh opportunities.</p>
+        <div class="card">
+          <img src="./assets/images/huddle-landing-page-with-curved.png" alt="retro pcs" class="card__image">
+          <div class="card__details">
+            <h2 class="card__number">03</h2>
+            <a class="card__title" href="https://gsds-huddle-landing-page-with-curved.netlify.app/" target="_blank">
+              <h3 class="card__title">Página de inicio de grupo con secciones curvas</h3>
+            </a>
+            <p class="card__description">Vea el diseño óptimo para el sitio según el tamaño de pantalla de su
+              dispositivo.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <img src="./assets/images/ecommerce-product-page.png" alt="retro pcs" class="card__image">
+          <div class="card__details">
+            <h2 class="card__number">03</h2>
+            <a class="card__title" href="https://gsds-ecommerce-product-page.netlify.app/" target="_blank">
+              <h3 class="card__title">Página de productos de comercio electrónico</h3>
+            </a>
+            <p class="card__description">Una hermosa página de productos, puede agregar artículos al carrito, ver el
+              carrito y eliminar artículos de él.</p>
+          </div>
         </div>
       </div>
     </aside>
 
+    <section class="contact">
+      <h2 class="contact__title">Contáctame</h2>
+      <form class="form" action="send.php" method="post" name="contact" id="contact">
+        <label for="name" class="form__label-name">Nombre completo</label>
+        <input class="form__input-name" type="text" placeholder="Steve Jobs" name="name" id="name">
+
+        <label for="email" class="form__label-email">Email</label>
+        <input class="form__input-email" type="email" name="email" id="email" placeholder="steve@apple.com">
+
+        <label for="menssage" class="form__label-menssage">Mensaje</label>
+        <textarea id="menssage" name="menssage" class="form__menssage"
+          placeholder="Todo lo que quieras decir aquí. Sea lo más preciso posible, ya que nos ahorra tiempo a ambos."></textarea>
+        <input class="form__btn-submit" type="submit" value="Enviar">
+      </form>
+    </section>
+
     <footer class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Gustavo S. Dos Santos</a>.
+      Copyright ©2023 <a href"https://github.com/GustavoSDS">Gustavo S. Dos Santos</a>.. All rights reserved.
     </footer>
 
     <script src="./js/index.js"></script>
