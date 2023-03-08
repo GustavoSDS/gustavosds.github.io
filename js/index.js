@@ -15,3 +15,10 @@ closeButton.addEventListener('click', () => {
     navMenu.style.display = 'none';
     navBackground.style.display = 'none';
 });
+
+let btn_submit = document.querySelector('.form__btn-submit');
+
+btn_submit.addEventListener('click', (e)=>{
+    // console.log('Hola mundo')
+    e.preventDefault;
+});
